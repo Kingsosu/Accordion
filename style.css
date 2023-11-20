@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+}
+.container{
+    width: 500px;
+}
+.accordion-item{
+    border: 2px solid gray;
+    margin-bottom: 15px;
+}
+.accordion-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    height: 50px;
+    background-color: rgb(186, 253, 178);
+}
+.bx-bookmark-minus{
+    transform: rotate(180deg);
+    transition: linear .6s;
+}
+.bx-bookmark-plus{
+    transition: linear .6s;
+}
+.accordion-header button{
+    font-size: 2rem;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.accordion-item .accordion-content{
+    padding: 10px;
+    line-height: 2;
+    font-weight: 500;
+    font-size: 1rem;
+    display: none;
+}
+
+.accordion-item.active .accordion-content{
+    /* display: block; */
+}
+
+#contact-form input{
+    width: 100%;
+    height: 40px;
+    /* text-transform: uppercase; */
+    padding-left: 10px;
+    font-weight: 500;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+}
+
+#contact-form input[name="fullname"]{
+    text-transform: capitalize;
+}
+
+#contact-form input::placeholder{
+    text-transform: capitalize;
+    font-weight: 500;
+}
+#contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+}
+#contact-form input[type="submit"]{
+    font-weight: 500;
+}
+
+@media (max-width:600px){
+    html{
+        font-size: 14px;
+    }
+    .container{
+        width: 100%;
+        max-width: 300px;
+    }
+}
